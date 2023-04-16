@@ -42,8 +42,18 @@ const Form = ({input, setInput, tasks, setTasks, editTask, setEditTask}) => {
     return (
         <div className="form">
             <form onSubmit={onFormSubmit}> 
-                <input type="text" placeholder="Add todo" className="todoInput" value={input} required onChange={onInputChange}></input>
-                <button className="AddButton" type="submit" >Add</button>
+                <input 
+                type="text" 
+                placeholder="Add todo" 
+                className="todoInput" 
+                value={input} 
+                required 
+                onChange={onInputChange}></input>
+
+                
+                <button 
+                className="AddButton" 
+                type="submit" >Add</button>
             </form>
         </div>
     )

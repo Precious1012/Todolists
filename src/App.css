@@ -116,7 +116,7 @@ body,
 
 .EditButton {
     background-color: rgb(48, 6, 6);
-    color: rgb(72, 89, 97);
+    color: rgb(117, 199, 158);
     border: 1px solid rgb(226, 189, 189);
     border-radius: 3px;
     transition: 1s;
@@ -130,7 +130,7 @@ body,
 
 .DeleteButton {
     background-color: transparent;
-    color: rgb(221, 139, 201);
+    color: rgb(9, 124, 133);
     border: 1px solid rgb(226, 189, 189);
     border-radius: 3px;
     transition: 1s;

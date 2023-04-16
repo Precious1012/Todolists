@@ -3,6 +3,8 @@ import { useState } from "react";
 import TaskData from "./taskdata";
   
 const Tasklist = ({ tasks, setTasks, setEditTask }) => {
+
+ 
     
     const [currentPage, setCurrentPage] = useState(1);
     const recordsPerPage = 4;
