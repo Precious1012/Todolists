@@ -81,19 +81,19 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
                                 
     
                             <div className="iconsContainer">
-                                    <button className="CompleteButton" onClick={() => handleComplete(task)}>
+                                    <button className="CompleteButton">
                                         <i className="fa fa-check-circle"></i>
                                     </button>
     
                                 <br></br>
     
-                                    <button className="EditButton" onClick={() => handleEdit()} >
+                                    <button className="EditButton" >
                                         <i className="fa fa-edit"></i>
                                     </button>
     
                                 <br></br>
     
-                                    <button className="DeleteButton" onClick={()=> handleDelete(task)}>
+                                    <button className="DeleteButton">
                                         <i className="fa fa-trash"></i>
                                     </button>
     

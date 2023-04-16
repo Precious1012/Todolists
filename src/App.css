@@ -107,7 +107,7 @@ body,
     border-radius: 3px;
     transition: 1s;
     cursor: pointer;
-    padding: 0 1px ;
+    padding: 0px 2px ;
 }
 
 .CompleteButton {
@@ -121,7 +121,7 @@ body,
     border-radius: 3px;
     transition: 1s;
     cursor: pointer;
-    padding: 0 1px ;
+    padding: 0 2px ;
 }
 
 .EditButton {
@@ -135,7 +135,7 @@ body,
     border-radius: 3px;
     transition: 1s;
     cursor: pointer;
-    padding: 0 1px ;
+    padding: 0 2px ;
 }
 
 .DeleteButton {
