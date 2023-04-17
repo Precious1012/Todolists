@@ -6,13 +6,16 @@ import './App.css';
 
 const App = () => {
 
+  //setting variable to simulate tasks in the browser
+  const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  const [tasks, setTasks] = useState([]); 
+  // setting variables and states for inputs and tasks
+  const [tasks, setTasks] = useState(initialState); 
   const [input, setInput] = useState("");
   const [editTask, setEditTask] = useState(null);
   
 
-
+  
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks)); 
   },[tasks]);
