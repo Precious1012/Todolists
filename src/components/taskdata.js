@@ -1,18 +1,18 @@
 const TaskData = [
     {
-        title: "release car"
+        title: "CALL DAVE BY 7PM"
     },
     {
         title: "CLOSE BY 5PM"
     },
     {
-        title: "Dribble"
+        title: "E-MAIL THE ORGANIZATION"
     },
     {
-        title: "Cut ties"
+        title: "STUDY TILL DAWN"
     },
     {
-        title: "away"
+        title: "Revision From Home"
     },
     {
         title: "Be good"

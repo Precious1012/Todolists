@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import Header from './components/header';
 import Form from './components/Form.js';
 import Tasklist from './components/tasklist.js';
-import TaskData from './components/taskdata';
 import './App.css';
 
 const App = () => {
@@ -23,19 +22,22 @@ const App = () => {
     <div className='Container'>
 
         <div className='AppWrapper'>
-            <div>
-              <Header/>
-            </div>
 
-            <div> 
-              <Form
-                input = {input}
-                setInput = {setInput}
-                tasks = {tasks}
-                editTask = {editTask}
-                setTasks = {setTasks}
-                setEditTask={setEditTask}/> 
-            </div>
+          <div className='TopWrapper'>
+                <div>
+                  <Header/>
+                </div>
+
+                <div> 
+                  <Form
+                    input = {input}
+                    setInput = {setInput}
+                    tasks = {tasks}
+                    editTask = {editTask}
+                    setTasks = {setTasks}
+                    setEditTask={setEditTask}/> 
+                </div>
+          </div>
 
             <div>
                 <Tasklist

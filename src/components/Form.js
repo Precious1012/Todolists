@@ -34,10 +34,6 @@ const Form = ({input, setInput, tasks, setTasks, editTask, setEditTask}) => {
 
     }
 
-    const showButton = ({ id }) => {
-        
-            
-    }
     
     return (
         <div className="form">

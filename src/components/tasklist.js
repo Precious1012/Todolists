@@ -5,22 +5,22 @@ import TaskData from "./taskdata";
 const Tasklist = ({ tasks, setTasks, setEditTask }) => {
 
  
-    
+//setting variables to calculate pages to display
     const [currentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 4;
+    const recordsPerPage = 3;
     const lastIndex = currentPage * recordsPerPage; 
     const firstIndex = lastIndex - recordsPerPage;  
     const records = TaskData.slice(firstIndex, lastIndex);
     const numberOfPages = Math.ceil(TaskData.length / recordsPerPage);
-    const numbers = [...Array(numberOfPages + 1).keys()].slice(1);
 
 
+// functions to  handle task managements
 
-
+        //delete function
     const handleDelete = ({ id }) => {
         setTasks(tasks.filter((task) => task.id !== id));
     };
-
+        //complete function
     const handleComplete = (task) => {
         setTasks(
             tasks.map((item) => {
@@ -31,7 +31,7 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
             })
         );
     };
-
+            // edit function
     const handleEdit = ({ id }) => {
         const findTask = tasks.find((task) => task.id === id);
         setEditTask(findTask);
@@ -41,8 +41,9 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
 
     return (
         <div>
-
+            
             {
+                // Creating tasks from the input values
                 tasks.map((task) => (
                     <li className="TaskList" key={task.id}>
                         <input
@@ -65,13 +66,11 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
                             </button>
                         </div>
                     </li>
-                )
-
-                )
-                }
+                ))
+            }
 
                 {
-                    
+                   //Rendering of all the tasks in the database  
                      records.map((task) => (
                         
                         <div className="TaskList" >
@@ -106,8 +105,12 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
                 }
 
                 {
+                    // including pagination to the array of tasks rendered from the database 
                     <nav>
+
+                        
                     <ul className="pagination">
+                        
                         <div className="page-item">
                             <a
                             href="#" 
@@ -126,20 +129,26 @@ const Tasklist = ({ tasks, setTasks, setEditTask }) => {
                     </ul>
                 </nav>
                 }
+               
         </div>
     );
 
+
+// functions to Paginate the array displayed
+
+        // function to go back
     function prevPage() {
         if (currentPage !== 1) {
             setCurrentPage(currentPage - 1)
         }
     }
- 
+        //function to proceed to next page
     function NextPage() {    
         if (currentPage !== numberOfPages) {
             setCurrentPage(currentPage + 1)
         } 
     }
+
 }
 
 export default Tasklist;
